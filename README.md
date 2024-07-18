@@ -11,7 +11,7 @@ pip install convast
 ## Usage
 
 ```bash
-convast --input <input_file> --output <output_file> --format <format>
+convast --output <output_file> --format <format> <input_file> 
 ```
 
 ## Supported Formats
