@@ -1,5 +1,5 @@
 id: https://example.com/NCBI_antibiogram
-name: PHA4GE
+name: NCBI_antibiogram
 description: 'Schema for validation of AST antibiogram data'
 version: 1.0.0
 imports:
