@@ -31,7 +31,8 @@ Changelog = "https://github.com/pha4ge/convast/blob/main/CHANGELOG.md"
 [project.optional-dependencies]
 dev = [
     "ruff",
-    "black>=23.0,<24.0",
+    "black",
+    "pylint",
     "pytest",
     "pytest-cov",
     "twine>=1.11.0",

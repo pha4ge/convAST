@@ -1,0 +1,38 @@
+id: https://w3id.org/linkml/examples/personinfo
+name: INSDC_AST_fields
+prefixes:
+  linkml: https://w3id.org/linkml/
+  personinfo: https://w3id.org/linkml/examples/personinfo
+imports:
+  - linkml:types
+default_range: string
+default_prefix: INSDC_AST_fields
+
+classes:
+  ENA:
+    attributes:
+      bioSample_ID:
+      antibiotic_name:
+      resistance_phenotype:
+      measurement_sign:
+      measurement:
+      measurement_units:
+      laboratory_typing_method:
+      platform:
+      ast_standard:
+      breakpoint_version:
+      species:
+
+  NCBI:
+    attributes:
+      bisample_accession:
+      antibiotic:
+      resistance_phenotype:
+      measurement_sign:
+      measurement:
+      measurement_units:
+      laboratory_typing_method:
+      laboratory_typing_platform:
+      vendor:
+      laboratory_typing_method_version_or_reagent:
+      testing_standard:
