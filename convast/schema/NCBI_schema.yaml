@@ -1,0 +1,149 @@
+id: https://example.com/NCBI_antibiogram
+name: PHA4GE
+description: 'Schema for validation of AST antibiogram data'
+version: 1.0.0
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+classes:
+  NCBI_antibiogram:
+    description: Class representing an antibiogram
+    slots:
+      - biosample_accession
+      - organism
+      - antibiotic
+      - resistance_phenotype
+      - measurement
+      - measurement_units
+      - measurement_sign
+      - laboratory_typing_method
+      - laboratory_typing_platform
+      - vendor
+slots:
+  biosample_accession:
+    title: biosample_accession
+    range: string
+    description: The identifier assigned to a BioSample in INSDC archives
+    examples: SAMN14180202
+    exact_mappings: GENEPIO:0001139
+  organism:
+    title: organism
+    range: string
+    description: Taxonomic name of the organism
+    examples: 
+  antibiotic:
+    title: antibiotic
+    range: string
+    description: Name of the antibiotic
+    examples: 
+  resistance_phenotype:
+    title: resistance_phenotype
+    range: resistance_phenotype_menu
+    description: The antimicrobial resistance phenotype, as determined by the antibiotic susceptibility measurement and testing standard for this antibiotic
+    examples: susceptible 
+  measurement:
+    title: measurement
+    range: float
+    description: The measured value of antimicrobial resistance
+    examples:
+  measurement_units:
+    title: measurement_units
+    range: measurement_units_menu
+    description: The units of measurement for antimicrobial resistance measurement
+    examples:
+  measurement_sign:
+    title: measurement_sign
+    range: measurement_sign_menu
+    description: The qualifier associated with the antibiotic susceptibility measurement
+    examples:
+  laboratory_typing_method:
+    title: laboratory_typing_method
+    range: laboratory_typing_method_menu
+    description: The general method used for antibiotic susceptibility testing
+    examples:
+  laboratory_typing_platform:
+    title: laboratory_typing_platform
+    range: laboratory_typing_platform_menu
+    description: The brand/platform used for antibiotic susceptibility testing
+    examples:
+  vendor:
+    title: vendor
+    range: vendor_menu
+    description: The name of the vendor of the testing platform used
+    examples:
+enums:
+  resistance_phenotype_menu:
+    permissible_values:
+      resistant:
+        text: resistant
+        meaning: ARO:3004301
+      susceptible:
+        text: susceptible
+        meaning: ARO:3004302
+      intermediate:
+        text: intermediate
+        meaning: ARO:3004300
+      nonsusceptible:
+        text: nonsusceptible
+        meaning: ARO:3004303
+      not_defined:
+        text: not_defined
+      susceptible-dose dependent:
+        text: susceptible-dose dependent
+        meaning: ARO:3004304
+  measurement_units_menu:
+    permissible_values:
+      mg_per_L:
+        text: mg/L
+        meaning: UO:0000273
+      mm:
+        text: mm
+        meaning: UO:0000016
+  measurement_sign_menu:
+    permissible_values:
+      less_than: 
+        text: '<'
+      less_than_or_equal:
+        text: '<='
+      equal_to:
+        text: '=='
+      greater_than:
+        text: '>'
+      greater_than_or_equal:
+        text: '>='
+  laboratory_typing_method_menu:
+    permissable_values:
+      MIC:
+        text: MIC
+      agar dilution:
+        text: agar dilution
+      disk diffusion:
+        text: disk diffusion
+      missing:
+        text: missing
+  laboratory_typing_platform_menu:
+    permissible_values:
+      Microscan:
+        text: Microscan
+        meaning: ARO:3004400
+      Phoenix: 
+        text: Phoenix
+        meaning: ARO:3004401 
+      Sensititre:
+        text: Sensititre
+        meaning: ARO:3004402
+      Vitek: 
+        text: Vitek
+        meaning: ARO:3004403
+  vendor_menu:
+    permissible_values:
+      Becton Dickinson:
+      Biomérieux:
+      Siemens:
+      Trek:
+
+
+  
+
+
