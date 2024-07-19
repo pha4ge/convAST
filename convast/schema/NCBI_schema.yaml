@@ -20,6 +20,8 @@ classes:
       - laboratory_typing_method
       - laboratory_typing_platform
       - vendor
+      - laboratory_typing_method_version_or_reagent
+      - testing_standard
 slots:
   biosample_accession:
     title: biosample_accession
@@ -34,7 +36,7 @@ slots:
     examples: 
   antibiotic:
     title: antibiotic
-    range: string
+    range: antibiotic_menu
     description: Name of the antibiotic
     examples: 
   resistance_phenotype:
@@ -72,7 +74,361 @@ slots:
     range: vendor_menu
     description: The name of the vendor of the testing platform used
     examples:
+  laboratory_typing_method_version_or_reagent:
+    title: laboratory_typing_method_version_or_reagent
+    range: laboratory_typing_method_version_or_reagent_menu
+    description: 
+    examples:
+  testing_standard:
+    title: testing_standard
+    range: testing_standard_menu
+    description: 
+    examples:
 enums:
+  antibiotic_menu:
+    permissible_values:
+      acridine dye:
+      acriflavin:
+      actinomycin:
+      actinomycin D:
+      amikacin:
+      amoxicillin:
+      amoxicillin-clavulanic acid:
+      amphotericin B:
+      ampicillin:
+      ampicillin-sulbactam:
+      amythiamicin A:
+      anidulafungin:
+      antibiotic A40926:
+      antibiotic A47934:
+      apramycin:
+      arbekacin:
+      arsphenamine:
+      arylomycin:
+      astromicin:
+      aurodox:
+      avoparcin:
+      azamulin:
+      azdimycin:
+      azidamfenicol:
+      azithromycin:
+      azlocillin:
+      aztreonam:
+      bacitracin:
+      bacitracin A:
+      bacitracin B:
+      bacitracin F:
+      balhimycin:
+      benzylpenicillin:
+      bicyclomycin:
+      bleomycin:
+      bleomycin A2:
+      bleomycin B2:
+      bleomycinic acid:
+      brodimoprim:
+      butirosin:
+      capreomycin:
+      carbenicillin:
+      carbomycin:
+      caspofungin:
+      cefaclor:
+      cefadroxil:
+      cefalexin:
+      cefalotin:
+      cefamandole:
+      cefazolin:
+      cefdinir:
+      cefditoren:
+      cefepime:
+      cefetamet:
+      cefideroco:
+      cefixime:
+      cefmetazole:
+      cefonicid:
+      cefoperazone:
+      cefotaxime:
+      cefotaxime-clavulanic acid:
+      cefotetan:
+      cefotiam:
+      cefoxitin:
+      cefpodoxime:
+      cefpodoxime-proxetil:
+      cefprozil:
+      ceftaroline:
+      ceftazidime:
+      ceftazidime-avibactam:
+      ceftazidime-clavulanic acid:
+      ceftibuten:
+      ceftiofur:
+      ceftizoxime:
+      ceftobiprole:
+      ceftolozane-tazobactam:
+      ceftriaxone:
+      cefuroxime:
+      celesticetin:
+      cephalexin:
+      cephalothin:
+      cephamycin:
+      cephapirin:
+      cephem:
+      cephradine:
+      chalcomycin:
+      chloramphenicol:
+      chloroeremomycin:
+      chlortetracycline:
+      cinoxacin:
+      ciprofloxacin:
+      clarithromycin:
+      clavulanic acid:
+      clinafloxacin:
+      clindamycin:
+      clofazimine:
+      clorobiocin:
+      cloxacillin:
+      colistin:
+      colistin A:
+      colistin B:
+      coumermycin A1:
+      cyclic thiazolyl peptide elfamycin:
+      cycloserine:
+      dalbavancin:
+      dalfopristin:
+      danofloxacin:
+      daptomycin:
+      defensin:
+      delafloxacin:
+      demeclocycline:
+      diaminopyrimidine:
+      dibekacin:
+      dicloxacillin:
+      dihydromocimycin:
+      dirithromycin:
+      doripenem:
+      doxycycline:
+      edeine:
+      edeine A:
+      edeine B:
+      edeine D:
+      edeine F:
+      efrotomycin:
+      elfamycin:
+      enacyloxin IIa:
+      enoxacin:
+      enrofloxacin:
+      eravacycline:
+      ertapenem:
+      erythromycin:
+      ethambutol:
+      ethionamide:
+      factumycin:
+      fidaxomicin:
+      fleroxacin:
+      flomoxef:
+      florfenicol:
+      flucloxacillin:
+      fluconazole:
+      flucytosine:
+      fluoroquinolone:
+      fosfomycin:
+      fosfomycin-glucose-6-phosphate:
+      fosmidomycin:
+      furazolidone:
+      fusidic acid:
+      G418:
+      ganefromycin:
+      gatifloxacin:
+      GE2270A:
+      GE37468:
+      gentamicin:
+      gentamicin B:
+      gentamicin C:
+      glycylcycline:
+      gramicidin:
+      gramicidin A:
+      gramicidin B:
+      gramicidin C:
+      gramicidin D:
+      gramicidin S:
+      grepafloxacin:
+      griseoviridin:
+      heneicomycin:
+      hygromycin B:
+      iclaprim:
+      imipenem:
+      Imipenem-EDTA-PA:
+      imipenem-relebactam:
+      isavuconazole:
+      isepamicin:
+      isoniazid:
+      isopenicillin N:
+      itraconazole:
+      josamycin:
+      kanamycin:
+      kanamycin A:
+      kasugamicin:
+      kirromycin:
+      kirrothricin:
+      kitasamycin:
+      L-681,217:
+      levofloxacin:
+      lincomycin:
+      lincosamide:
+      linezolid:
+      lipopeptide antibiotic:
+      lividomycin:
+      lividomycin A:
+      lividomycin B:
+      lomefloxacin:
+      loracarbef:
+      madumycin II:
+      mafenide:
+      magainin:
+      mecillinam:
+      megalomycin:
+      meropenem:
+      meropenem-vaborbactam:
+      methicillin:
+      methymycin:
+      metronidazole:
+      mezlocillin:
+      micafungin:
+      midecamycin:
+      minocycline:
+      moenomycin:
+      moenomycin A1:
+      moxalactam:
+      moxifloxacin:
+      mupirocin:
+      mycinamicin:
+      nafcillin:
+      nalidixic acid:
+      narbomycin:
+      neomycin:
+      netilmicin:
+      nicotinamide:
+      niddamycin:
+      nitrofurantoin:
+      norfloxacin:
+      novobiocin:
+      ofloxacin:
+      oleandomycin:
+      omadacycline:
+      oritavancin:
+      ostreogrycin B3:
+      oxacillin:
+      oxytetracycline:
+      para-aminosalicylic acid:
+      paromomycin:
+      patricin A:
+      patricin B:
+      pefloxacin:
+      penam:
+      penicillin:
+      penicillin N:
+      phenelfamycin A:
+      phenelfamycin B:
+      phenelfamycin C:
+      phenelfamycin D:
+      phenelfamycin E:
+      phenelfamycin F:
+      phenelfamycin G:
+      phenelfamycin H:
+      phenicol:
+      phenoxymethylpenicillin:
+      pikromycin:
+      piperacillin:
+      piperacillin-sulbactam:
+      piperacillin-tazobactam:
+      plazomicin:
+      pleuromutilin:
+      polymyxin:
+      polymyxin B:
+      polymyxin B1:
+      polymyxin B2:
+      polymyxin B3:
+      polymyxin B4:
+      posaconazole:
+      pristinamycin IA:
+      pristinamycin IB:
+      pristinamycin IIA:
+      propicillin:
+      prothionamide:
+      pulvomycin:
+      puromycin:
+      pyrazinamide:
+      quinupristin:
+      quinupristin-dalfopristin:
+      retapamulin:
+      ribostamycin:
+      rifabutin:
+      rifampin:
+      rifamycin:
+      rifapentine:
+      rifaximin:
+      ristocetin:
+      rosaramicin:
+      roxithromycin:
+      SB22484:
+      sisomicin:
+      sparfloxacin:
+      spectinomycin:
+      spiramycin:
+      streptogramin:
+      streptogramin A antibiotic:
+      streptogramin B antibiotic:
+      streptomycin:
+      streptothricin:
+      sulbactam:
+      sulfacetamide:
+      sulfadiazine:
+      sulfadimethoxine:
+      sulfadimidine:
+      sulfadoxine:
+      sulfamethizole:
+      sulfamethoxazole:
+      sulfasalazine:
+      sulfisoxazole:
+      sulfonamide:
+      surotomycin:
+      synercid:
+      tazobactam:
+      tedizolid:
+      teicoplanin:
+      telavancin:
+      telithromycin:
+      temocillin:
+      tetracycline:
+      tetroxoprim:
+      thiamphenicol:
+      thiostrepton:
+      tiamulin:
+      ticarcillin:
+      ticarcillin-clavulanic acid:
+      tigecycline:
+      tilmicosin:
+      timentin:
+      tinidazole:
+      tobramycin:
+      triclosan:
+      trimethoprim:
+      trimethoprim-sulfamethoxazole:
+      trovafloxacin:
+      tuberactinomycin:
+      tulathromycin:
+      tunicamycin:
+      tylosin:
+      tyrothricin:
+      UK-69,753:
+      unphenelfamycin:
+      valnemulin:
+      vancomycin:
+      verdamicin:
+      vernamycin B-gamma:
+      vernamycin C:
+      vertilimicin:
+      viomycin:
+      virginiamycin S2:
+      voriconazole:
   resistance_phenotype_menu:
     permissible_values:
       resistant:
@@ -139,9 +495,62 @@ enums:
   vendor_menu:
     permissible_values:
       Becton Dickinson:
+        text: Becton Dickinson
+        meaning: ARO:3004405
       Biomérieux:
+        text: Biomérieux
+        meaning: ARO:3004406
       Siemens:
+        text: Siemens
+        meaning: ARO:3004407
       Trek:
+        text: Trek
+        meaning: ARO:3004409
+  laboratory_typing_method_version_or_reagent_menu:
+    permissible_values:
+      96-Well Plate:
+        text: 96-Well Plate
+        meaning: BAO:0000513
+      E-Test:
+        text: E-Test
+        meaning: NCIT:85596
+      GM-NEG:
+        text: GM-NEG
+        meaning:
+  testing_standard_menu:
+    permissible_values:
+      BSAC:
+        text: British Society for Antimicrobial Chemotherapy (BSAC)
+        meaning: ARO:3004365
+      CLSI:
+        text: Clinical Laboratory and Standards Institute (CLSI)
+        meaning: ARO:3004366
+      DIN:
+        text: Deutsches Institut für Normung (DIN)
+        meaning: ARO:3004367
+      EUCAST:
+        text: European Committee on Antimicrobial Susceptibility Testing (EUCAST)
+        meaning: ARO:3004368
+      NARMS:
+        text: National Antimicrobial Resistance Monitoring System (NARMS)
+        meaning: ARO:3007195
+      NCCLS:
+        text: National Committee for Clinical Laboratory Standards (NCCLS)
+        meaning: ARO:3007193
+      SFM:
+        text: Société Française de Microbiologie (SFM)
+        meaning: ARO:3004369
+      SIR:
+        text: Swedish Reference Group for Antibiotics (SIR)
+        meaning: ARO:3007397
+      WRG:
+        text: Werkgroep Richtlijnen Gevoeligheidsbepalingen (WRG)
+        meaning: ARO:3007398
+      missing:
+        text: missing
+        meaning: data is missing
+
+
 
 
   
