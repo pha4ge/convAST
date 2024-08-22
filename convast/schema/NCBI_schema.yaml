@@ -8,6 +8,9 @@ prefixes:
   linkml: https://w3id.org/linkml/
   GENEPIO: http://purl.obolibrary.org/obo/GENEPIO_
   ARO: http://purl.obolibrary.org/obo/ARO_
+  UO: http://purl.obolibrary.org/obo/UO_
+  BAO: hhtp://purl.obolibrary.org/obo/BAO_
+  NCIT: hhtp://purl.obolibrary.org/obo/NCIT_
 classes:
   NCBI_antibiogram:
     description: Class representing an antibiogram
@@ -29,62 +32,50 @@ slots:
     title: biosample_accession
     range: string
     description: The identifier assigned to a BioSample in INSDC archives
-    examples: SAMN14180202
   organism:
     title: organism
     range: string
     description: Taxonomic name of the organism
-    examples: 
   antibiotic:
     title: antibiotic
     range: antibiotic_menu
     description: The name of the antibiotic that kills or slows the growth of microorganisms, including bacteria, viruses, fungi and protozoans
-    examples: actinomycin 
   resistance_phenotype:
     title: resistance_phenotype
     range: resistance_phenotype_menu
     description: The antimicrobial resistance phenotype, as determined by the antibiotic susceptibility measurement and testing standard for this antibiotic
-    examples: susceptible 
   measurement:
     title: measurement
     range: float
     description: The measured value of antimicrobial resistance
-    examples: 4
   measurement_units:
     title: measurement_units
     range: measurement_units_menu
     description: The units of measurement for antimicrobial resistance measurement
-    examples: mg/L
   measurement_sign:
     title: measurement_sign
     range: measurement_sign_menu
     description: The qualifier associated with the antibiotic susceptibility measurement
-    examples: 
   laboratory_typing_method:
     title: laboratory_typing_method
     range: laboratory_typing_method_menu
     description: The general method used for antibiotic susceptibility testing
-    examples: disk diffusion
   laboratory_typing_platform:
     title: laboratory_typing_platform
     range: laboratory_typing_platform_menu
     description: The brand/platform used for antibiotic susceptibility testing
-    examples: Microscan
   vendor:
     title: vendor
     range: vendor_menu
     description: The name of the vendor of the testing platform used
-    examples: Trek
   laboratory_typing_method_version_or_reagent:
     title: laboratory_typing_method_version_or_reagent
     range: laboratory_typing_method_version_or_reagent_menu
     description: The specific type or version of reagents and methods used in laboratory typing
-    examples: 96-Well Plate
   testing_standard:
     title: testing_standard
     range: testing_standard_menu
     description: The testing standard used for determination of resistance phenotype
-    examples: BSAC
 enums:
   antibiotic_menu:
     permissible_values:
