@@ -1,4 +1,5 @@
 """General utility functions for convast"""
+
 from pathlib import Path
 import logging
 import argparse

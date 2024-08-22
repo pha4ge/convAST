@@ -32,9 +32,7 @@ Changelog = "https://github.com/pha4ge/convast/blob/main/CHANGELOG.md"
 dev = [
     "ruff",
     "black",
-    "pylint",
     "pytest",
-    "pytest-cov",
     "twine>=1.11.0",
     "build",
     "setuptools",
@@ -57,15 +55,13 @@ include-package-data = true
 version = {attr = "convast.version.VERSION"}
 
 [tool.black]
-line-length = 100
+line-length = 115
 include = '\.pyi?$'
 exclude = '''
 (
       __pycache__
     | \.git
-    | \.mypy_cache
     | \.pytest_cache
-    | \.vscode
     | \.venv
     | \bdist\b
     | \bdoc\b
@@ -75,19 +71,8 @@ exclude = '''
 [tool.ruff]
 line-length = 115
 target-version = "py39"
-
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
-
-[tool.pylint.'MESSAGES CONTROL']
-max-line-length = 115
-disable = """
-logging-fstring-interpolation
-"""
 
 [tool.pytest.ini_options]
 testpaths = "tests/"
-python_classes = [
-  "Test*",
-  "*Test"
-]

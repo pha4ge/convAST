@@ -1,4 +1,5 @@
 """Version information for the package"""
+
 _MAJOR = "0"
 _MINOR = "1"
 # On main and in a nightly release the patch should be one ahead of the last

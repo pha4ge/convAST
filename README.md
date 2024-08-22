@@ -35,3 +35,7 @@ EMR/LIMs exports?
 - Standardised INSDC AST format dataclass imported from linkML (e.g., [linkML documentation example](https://linkml.io/linkml/intro/tutorial05.html))
 - Input parent class with generic functions for parsing, iterating, write, applying mappings (e.g., [hAMRonizedResultIterator](https://github.com/pha4ge/hAMRonization/blob/master/hAMRonization/Interfaces.py#L15))  
 - For each Vitek/Phoenix/Microtitre etc an iterator subclass that inherits from this input parent class including specific mappings and any adjustments to generic functions needed (e.g., [tool specific hAMRonization classes](https://github.com/pha4ge/hAMRonization/blob/master/hAMRonization/StarAmrIO.py#L14))
+
+Using the linkml runtime - the dataclasses are generated as follows:
+
+    gen-python convast/schema/NCBI_schema.yaml > convast/schema.py

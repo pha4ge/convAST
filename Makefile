@@ -1,13 +1,8 @@
-.PHONY : docs
-docs :
-	rm -rf docs/build/
-	sphinx-autobuild -b html --watch convast/ docs/source/ docs/build/
-
-.PHONY : run-checks
-run-checks :
-	black --check .
-	ruff check .
-	pytest -v --color=yes --doctest-modules tests/ convast/
+.PHONY : check 
+check :
+	black convast
+	ruff check convast
+	pytest -v --color=yes tests/ 
 
 .PHONY : build
 build :
