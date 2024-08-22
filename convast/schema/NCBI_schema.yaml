@@ -451,34 +451,34 @@ enums:
         meaning: ARO:3004304
   measurement_units_menu:
     permissible_values:
-      mg_per_L:
-        text: mg/L
+      "mg/L":
+        text: "mg/L"
         meaning: UO:0000273
       mm:
         text: mm
         meaning: UO:0000016
   measurement_sign_menu:
     permissible_values:
-      less_than: 
+      "<": 
         text: '<'
-      less_than_or_equal:
+      "<=":
         text: '<='
-      equal_to:
+      "==":
         text: '=='
-      greater_than:
+      ">":
         text: '>'
-      greater_than_or_equal:
+      ">=":
         text: '>='
   laboratory_typing_method_menu:
-    permissable_values:
+    permissible_values:
       MIC:
-        text: MIC
+        text: "MIC"
       agar dilution:
-        text: agar dilution
+        text: "agar dilution"
       disk diffusion:
-        text: disk diffusion
+        text: "disk diffusion"
       missing:
-        text: missing
+        text: "missing"
   laboratory_typing_platform_menu:
     permissible_values:
       Microscan:
@@ -521,39 +521,40 @@ enums:
   testing_standard_menu:
     permissible_values:
       BSAC:
-        text: British Society for Antimicrobial Chemotherapy (BSAC)
+        text: BSAC
+        title: British Society for Antimicrobial Chemotherapy (BSAC)
         meaning: ARO:3004365
       CLSI:
-        text: Clinical Laboratory and Standards Institute (CLSI)
+        text: CLSI
+        title: Clinical Laboratory and Standards Institute (CLSI)
         meaning: ARO:3004366
       DIN:
-        text: Deutsches Institut für Normung (DIN)
+        text: DIN
+        title: Deutsches Institut für Normung (DIN)
         meaning: ARO:3004367
       EUCAST:
-        text: European Committee on Antimicrobial Susceptibility Testing (EUCAST)
+        text: EUCAST
+        title: European Committee on Antimicrobial Susceptibility Testing (EUCAST)
         meaning: ARO:3004368
       NARMS:
-        text: National Antimicrobial Resistance Monitoring System (NARMS)
+        text: NARMS
+        title: National Antimicrobial Resistance Monitoring System (NARMS)
         meaning: ARO:3007195
       NCCLS:
-        text: National Committee for Clinical Laboratory Standards (NCCLS)
+        text: NCCLS
+        title: National Committee for Clinical Laboratory Standards (NCCLS)
         meaning: ARO:3007193
       SFM:
-        text: Société Française de Microbiologie (SFM)
+        text: SFM
+        title: Société Française de Microbiologie (SFM)
         meaning: ARO:3004369
       SIR:
-        text: Swedish Reference Group for Antibiotics (SIR)
+        text: SIR
+        title: Swedish Reference Group for Antibiotics (SIR)
         meaning: ARO:3007397
       WRG:
-        text: Werkgroep Richtlijnen Gevoeligheidsbepalingen (WRG)
+        text: WRG
+        title: Werkgroep Richtlijnen Gevoeligheidsbepalingen (WRG)
         meaning: ARO:3007398
       missing:
         text: missing
-        meaning: data is missing
-
-
-
-
-  
-
-
